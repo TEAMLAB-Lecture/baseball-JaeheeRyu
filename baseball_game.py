@@ -319,7 +319,12 @@ def main():
                         break
                 continue
         else:
-            user_input_number = input("Input guess number : ")
+            while True:  # imput user_input_number
+                user_input_number = input("Input guess number : ")
+                if not (is_validated_number(user_input_number)):
+                    print("Wrong Input, Input again")
+                else:
+                    break
     # ==================================
     print("Thank you for using this program")
     print("End of the Game")
