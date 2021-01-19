@@ -287,8 +287,7 @@ def game(user_input_number, random_number):
         return 1
     elif not(is_validated_number(user_input_number)): #유효 숫자가 아닌 경우
         print("Wrong Input, Input again")
-        user_input_number = input("Input guess number : ")
-        game(user_input_number, random_number)
+        game(input("Input guess number : "), random_number)
     else: #0도 아니고 유효 숫자인 경우
         result = get_strikes_or_ball(user_input_number, random_number)
         print(f"Strikes : {result[0]} , Balls : {result[1]}")
@@ -304,13 +303,12 @@ def game(user_input_number, random_number):
             elif is_yes(answer): #새 게임
                 random_number = str(get_not_duplicated_three_digit_number())
                 print("Random Number is : ", random_number)
-                user_input_number = input("Input guess number : ")
-                game(user_input_number, random_number)
+                game(input("Input guess number : "), random_number)
             elif answer == '0':
+                game(answer, random_number)
                 return 1
-        else: #not strike
-            user_input_number = input("Input guess number : ")
-            game(user_input_number, random_number)
+        else: #not 3strikes
+            game(input("Input guess number : "), random_number)
 
 def main():
     print("Play Baseball")
