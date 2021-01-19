@@ -31,7 +31,7 @@ def is_digit(user_input_number):
     # '''
     # ===Modify codes below=============
     # 조건에 따라 변환되어야 할 결과를 result 변수에 할당
-    result = None
+    result = True
     try:
         int(user_input_number)
         result = True
@@ -62,7 +62,7 @@ def is_between_100_and_999(user_input_number):
     # '''
     # ===Modify codes below=============
     # 조건에 따라 변환되어야 할 결과를 result 변수에 할당
-    result = None
+    result = True
     user_input_number = int(user_input_number)
     if user_input_number >= 100 and user_input_number <= 1000:
         result = True
@@ -94,7 +94,7 @@ def is_duplicated_number(three_digit):
     # '''
     # ===Modify codes below=============
     # 조건에 따라 변환되어야 할 결과를 result 변수에 할당
-    result = None
+    result = False
     for i in three_digit:
         if three_digit.count(i) > 1:
             result = True
@@ -128,7 +128,7 @@ def is_validated_number(user_input_number):
     # ===Modify codes below=============
     # 조건에 따라 변환되어야 할 결과를 result 변수에 할당
 
-    result = None
+    result = False
     if is_digit(user_input_number) and is_between_100_and_999(user_input_number) and not(is_duplicated_number(user_input_number)):
         result = True
     else:
@@ -159,7 +159,6 @@ def get_not_duplicated_three_digit_number():
     # 조건에 따라 변환되어야 할 결과를 result 변수에 할당
     # get_random_number() 함수를 사용하여 random number 생성
 
-    result = None
     while True:
         num = get_random_number()
         if is_validated_number(str(num)):
@@ -236,7 +235,7 @@ def is_yes(one_more_input):
     # ===Modify codes below=============
     # 조건에 따라 변환되어야 할 결과를 result 변수에 할당
 
-    result = None
+    result = False
     one_more_input = one_more_input.lower()
     if one_more_input == 'y' or one_more_input == 'yes':
         result = True
@@ -273,7 +272,7 @@ def is_no(one_more_input):
     # ===Modify codes below=============
     # 조건에 따라 변환되어야 할 결과를 result 변수에 할당
 
-    result = None
+    result = False
     one_more_input = one_more_input.lower()
     if one_more_input == 'n' or one_more_input == 'no':
         result = True
