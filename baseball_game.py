@@ -293,7 +293,7 @@ def game(user_input_number, random_number):
         result = get_strikes_or_ball(user_input_number, random_number)
         print(f"Strikes : {result[0]} , Balls : {result[1]}")
         if result[0] == 3:
-            while True:
+            while True:# 게임 다시 할래?
                 answer = input("You win, one more(Y/N)?")
                 if is_no(answer) or is_yes(answer) or answer == '0':
                     break
@@ -306,9 +306,9 @@ def game(user_input_number, random_number):
                 print("Random Number is : ", random_number)
                 user_input_number = input("Input guess number : ")
                 game(user_input_number, random_number)
-            else:
-                game(answer, random_number)
-        else:
+            elif answer == '0':
+                return 1
+        else: #not strike
             user_input_number = input("Input guess number : ")
             game(user_input_number, random_number)
 
