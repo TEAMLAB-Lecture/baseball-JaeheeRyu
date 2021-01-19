@@ -64,7 +64,7 @@ def is_between_100_and_999(user_input_number):
     # 조건에 따라 변환되어야 할 결과를 result 변수에 할당
     result = True
     user_input_number = int(user_input_number)
-    if user_input_number >= 100 and user_input_number <= 1000:
+    if user_input_number >= 100 and user_input_number < 1000:
         result = True
     else:
         result = False
