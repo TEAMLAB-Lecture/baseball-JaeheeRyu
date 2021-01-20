@@ -307,8 +307,6 @@ def game(user_input_number, random_number):
             elif answer == '0':
                 game(answer, random_number)
                 return 1
-            else:
-                return 1
         else: #not 3strikes
             game(input("Input guess number : "), random_number)
 
